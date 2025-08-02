@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Adopción</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3f3;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .paw-icon {
+            font-size: 24px;
+            color: #ff6b6b;
+        }
+
+        fieldset {
+            border: 2px solid #ffd3d3;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #ff6b6b;
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ffd3d3;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button[type="submit"] {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #f8f9fa;
+            color: #666;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .checkbox-group {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span class="paw-icon">🐾</span>
+            Formulario de Adopción
+            <span class="paw-icon">🐾</span>
+        </h1>
+
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Datos del Adoptante</legend>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" min="18">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota">Mascota que desea adoptar</label>
+                    <select id="mascota" name="mascota">
+                        <option value="">Seleccione una opción</option>
+                        <option value="perro">Perro 🐕</option>
+                        <option value="gato">Gato 🐱</option>
+                        <option value="conejo">Conejo 🐰</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="tiene_mascotas">
+                        Ya tengo mascotas en casa
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">¿Por qué deseas adoptar?</label>
+                    <textarea id="motivo" name="motivo"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="buttons">
+                <button type="submit">✨ Enviar solicitud</button>
+                <button type="reset">🗑️ Borrar todo</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
